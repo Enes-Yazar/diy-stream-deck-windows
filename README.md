@@ -4,10 +4,10 @@ This project is a 2-part video series created for [Shorts](https://www.youtube.c
 
 This project is divided into Windows and Mobile.
 
-1. "I'm making my own Stream Deck" Windows Form. Here are Visual Stuido files written in C#, form design, and a server. 
+1. yayincideck folder : "I'm making my own Stream Deck" Windows Form. Here are Visual Stuido files written in C#, form design, and a server. 
 Detail : form1.in cs, I adjust the style, font, color and alignment of buttons and panels, as well as their special actions in the video...
 
-2. "I'm making my own Stream Deck" Unity Mobile. Here There are unity files and design written in C#.
+2. eniummobiledec folder : "I'm making my own Stream Deck" Unity Mobile. Here There are unity files and design written in C#.
 Detail : We convert incoming data in JSON format into objects in Unity, and moreover in video...
 
 # VS Windows Forms :
