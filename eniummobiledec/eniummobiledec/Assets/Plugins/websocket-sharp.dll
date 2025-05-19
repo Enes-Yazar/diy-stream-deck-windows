@@ -1,0 +1,39 @@
+using UnityEngine;
+using WebSocketSharp;
+using System;
+
+public class ButtonSync : MonoBehaviour
+{
+    WebSocket ws;
+    ButtonLoader buttonLoader;
+
+    void Start()
+    {
+        buttonLoader = FindObjectOfType<ButtonLoader>();
+
+        string ip = PlayerPrefs.GetString("server_ip"); // QR koddan alınan IP
+        string wsUrl = $"ws://{ip}:8080/ws/";
+
+        ws = new WebSocket(wsUrl);
+        ws.OnMessage += (sender, e) =>
+        {
+            Debug.Log("Yeni buton verisi alındı.");
+            PlayerPrefs.SetString("last_button_json", e.Data);
+            PlayerPrefs.Save();
+
+            // Ana thread'de çalıştırmak için coroutine
+            UnityMainThreadDispatcher.Instance().Enqueue(() =>
+            {
+                buttonLoader.LoadFromJson(e.Data);
+            });
+        };
+
+        ws.ConnectAsync();
+    }
+
+    private void OnDestroy()
+    {
+        if (ws != null && ws.IsAlive)
+            ws.Close();
+    }
+}
