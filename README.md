@@ -1,4 +1,5 @@
-# diy-stream-deck-windows
+# BUILDING A DIY Stream Deck
+
 This project is a 2-part video series created for Shorts, Reels and Tiktok called "I'm making my own Stream Deck".
 
 This Project is divided into Windows and Mobile 2.
