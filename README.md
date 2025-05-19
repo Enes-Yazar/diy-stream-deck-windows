@@ -10,7 +10,7 @@ Detail : form1.in cs, I adjust the style, font, color and alignment of buttons a
 2. "I'm making my own Stream Deck" Unity Mobile. Here There are unity files and design written in C#.
 Detail : We convert incoming data in JSON format into objects in Unity, and moreover in video...
 
-# Windows :
+# VS Windows Forms :
 ![eniumdeck](https://github.com/user-attachments/assets/6cc32e96-3cec-4574-9b1b-928799d0f088)
 # Unity Mobile : 
 ![enişumbol](https://github.com/user-attachments/assets/ab0814d0-0855-481d-9d2f-45c3d3ddae7d)
